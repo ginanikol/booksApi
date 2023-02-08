@@ -12,6 +12,12 @@ import gina.nikol.springboot.demo.booksapp.model.Book;
 import gina.nikol.springboot.demo.booksapp.model.BookList;
 import gina.nikol.springboot.demo.booksapp.service.BooksService;
 
+/**
+ * A REST controller class that provides endpoint to retrieve books.
+ * 
+ * @author Gina Nikolouzou
+ * 
+ */
 @RestController
 public class BooksController {
 
@@ -19,9 +25,10 @@ public class BooksController {
 	BooksService bookService;
 	
 	/**
-	 * Gets all books that match the search title
-	 * @param search the title of the book
-	 * @return a list of books
+	 * Retrieves a list of books that match the search title.
+	 * 
+	 * @param search the title of the book to search for.
+	 * @return a list of books that match the search title.
 	 */
 	@GetMapping("/books")
 	public List<Book> getBooks(@RequestParam(value = "search") String search) {

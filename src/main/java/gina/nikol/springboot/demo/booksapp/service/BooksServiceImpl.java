@@ -8,9 +8,21 @@ import org.springframework.stereotype.Service;
 import gina.nikol.springboot.demo.booksapp.model.Book;
 import gina.nikol.springboot.demo.booksapp.model.BookList;
 
+/**
+ * Implementation class for the BooksService interface.
+ * 
+ * @author Gina Nikolouzou
+ * 
+ */
 @Service
 public class BooksServiceImpl implements BooksService {
 
+	/**
+	 * Parses the list of returned books to keep relevant book information.
+	 * 
+	 * @param response The response from the API containing all books.
+	 * @return A list of books.
+	 */
 	@Override
 	public List<Book> parseBooksResponse(BookList response) {
 
